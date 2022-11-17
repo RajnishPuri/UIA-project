@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.img {
+    margin-top: 40px;
+    position: relative;
+    /* text-align: center; */
+    z-index: -1000;
+}
+
+.img>img {
+    width: 100%;
+    /* overflow: hidden !important; */
+    object-fit: cover;
+    height: 100vh;
+
+}
+
+.sometext {
+    font-weight: bold;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

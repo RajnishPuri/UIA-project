@@ -1,0 +1,25 @@
+.mapsce {
+    background-color: black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map_h {
+    color: white;
+    font-size: 25px;
+
+}
+
+.maps_scroll {
+    max-width: 80%;
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.maps_scroll::-webkit-scrollbar {
+    display: none;
+}

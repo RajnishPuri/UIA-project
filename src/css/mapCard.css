@@ -1,0 +1,44 @@
+.mapcard {
+    width: 270px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.mapcard>img {
+    height: 160px;
+    width: 270px;
+
+}
+
+.mapDes {
+    padding: 10px;
+}
+
+.map_name {
+    font-size: 17px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.map_d {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.map_button {
+    background-color: bisque;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+
+}
+
+.map_button:hover {
+    background-color: rgb(245, 207, 161);
+}

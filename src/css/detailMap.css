@@ -1,0 +1,38 @@
+.detMapss {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.detailMap {
+
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailMap_head {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.detailMap_map {
+    width: 100%;
+    height: 80vh;
+    z-index: -1000px;
+    background-color: antiquewhite;
+}
+
+.detailMap_det {
+    margin-top: 20px;
+    padding: 20px;
+    color: rgb(100, 95, 95);
+}
+
+@media screen and (max-width:1000px) {
+    .detailMap {
+        width: 90%;
+    }
+}
