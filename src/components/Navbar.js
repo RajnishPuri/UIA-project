@@ -33,9 +33,11 @@ function Navbar() {
                 <Link to='/'> <div className='navText'>CONTACT</div></Link>
 
             </div>
-            <div className='navRight'>
-                <SearchIcon />
-            </div>
+            <Link to='/login'>
+                <div className='navRight'>
+                    Login
+                </div>
+            </Link>
         </div>
 
 

@@ -6,6 +6,8 @@ import '../css/detailMap.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 // import mkstyle from '../style.json'
 import features from './features.geojson'
+// import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+// import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3BhcnRhbnJhaiIsImEiOiJjbGFrcHFkd28wYTdvM29ydDR2cjNvc2duIn0.furX-Iz2YZk73evtS2RZIQ';
@@ -28,7 +30,8 @@ const Popup = ({ routeName, routeNumber, city, type }) => (
 
 
 
-function DetailMap() {
+function DetailMap({ id, st1, st2, st3, st4, con1, con2, con3, con4, des1, des2, des3, des4 }) {
+
     // const [lat, setLat] = useState(37.8)
     // const [long, setLong] = useState(-122.4)
 
@@ -40,14 +43,19 @@ function DetailMap() {
 
     const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }))
 
+
+    // const st4 = ''
+
     useEffect(() => {
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
-            style: "mapbox://styles/spartanraj/clam4hyns006v15qm9t69yi4q",
+            style: id === 1 ? st1 : id === 2 ? st2 : id === 3 ? st3 : st4,
             center: [lng, lat],
             zoom: zoom
         });
+
+
 
         // map.on("load", () => {
         //     map.addSource("bus-routes", {
@@ -103,10 +111,9 @@ function DetailMap() {
 
     // testing popup in marker
 
-
     useEffect(() => {
         if (!map.current) return; // wait for map to initialize
-        map.current.on('move', () => {
+        map.current.on('click', () => {
             setLng(map.current.getCenter().lng.toFixed(4));
             setLat(map.current.getCenter().lat.toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
@@ -125,25 +132,30 @@ function DetailMap() {
     // map.on("load", mark)
 
 
+    // map.addControl(
+    //     new MapboxGeocoder({
+    //         accessToken: mapboxgl.accessToken,
+    //         mapboxgl: mapboxgl
+    //     })
+    // );
+
+
 
 
 
     return (
         <div className='detMapss'>
             <div className='detailMap'>
-                <div className='detailMap_head'>contact</div>
+                <div className='detailMap_head'>{id === 1 ? con1 : id === 2 ? con2 : id === 3 ? con3 : con4}</div>
                 <div className='detailMap_map' ref={mapContainer}>
                     {/* map is here */}
                     <div className="sidebar">
                         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
                     </div>
-
-
-
                 </div>
 
                 <div className='detailMap_det'>
-                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    {id === 1 ? des1 : id === 2 ? des2 : id === 3 ? des3 : des4}
                 </div>
 
                 {/* adding chart here */}

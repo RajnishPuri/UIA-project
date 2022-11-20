@@ -43,3 +43,16 @@
     background-color: white;
     color: black;
 }
+
+.navRight {
+    color: black;
+    background-color: white;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+
+}

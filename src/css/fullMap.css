@@ -1,0 +1,71 @@
+.fullMap {
+    margin-top: 40px;
+}
+
+.full_map {
+    height: 100vh;
+    width: 100%;
+}
+
+.form_lat {
+    padding: 20px;
+
+}
+
+.latN {
+    margin-bottom: 10px;
+}
+
+.latNa {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.latLButton {
+    margin-top: 20px !important;
+    background-color: gray !important;
+    color: white !important;
+}
+
+.fillLL {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    background-color: aliceblue;
+}
+
+.addMan {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(49, 62, 62);
+}
+
+.LatTT {
+    margin-bottom: 15px;
+}
+
+.latName {
+    margin-bottom: 15px;
+}
+
+.acname {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.latGeoN {
+    margin-bottom: 15px;
+}
+
+.latGeoN>label {
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+.latlongSave {
+    background-color: gray !important;
+    color: white !important;
+    margin-top: 10px !important;
+    width: 100px !important;
+}
