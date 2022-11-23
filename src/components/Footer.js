@@ -9,8 +9,8 @@ function Footer() {
                     <div className="footer-col">
                         <h4>Olice</h4>
                         <ul>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">our services</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our services</a></li>
                             <li><a href="#">privacy policy</a></li>
                             <li><a href="#">vendors</a></li>
                         </ul>

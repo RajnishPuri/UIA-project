@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import FullMap from './components/FullMap';
+import NewMap from './components/new-map';
+import RegisterAquifer from './components/RegisterAquifer';
 
 function App() {
   // const { id: uId } = useParams()
@@ -33,6 +35,8 @@ function App() {
           <Route exact path='/maps/4' element={<DetailMap id={4} st4={st4} con4='WELLS' des4={des4} />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/fullmap' element={<FullMap />} />
+          <Route exact path='/newMap' element={<NewMap />} />
+          <Route exact path='/registerAquifer' element={<RegisterAquifer />} />
         </Routes>
         <Footer />
       </Router>

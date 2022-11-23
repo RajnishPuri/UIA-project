@@ -8,7 +8,7 @@ function Login() {
 
     const LogInUser = () => {
         if (userName === 'admin' && password === 'admin') {
-            window.location.href = '/fullmap'
+            window.location.href = '/newMap'
         }
         else {
             setErr('Please enter valid username and password!!!')

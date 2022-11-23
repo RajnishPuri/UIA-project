@@ -107,7 +107,7 @@ SimpleDialog.propTypes = {
 
 
 
-function FullMap() {
+function NewMap() {
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(20.8614);
@@ -214,16 +214,31 @@ function FullMap() {
     // Map Navigation
 
     window.onload = function () {
-        document.querySelector('#aquifer').addEventListener("click", (layer) => {
-            map.setStyle('mapbox://styles/spartanraj/clam4hyns006v15qm9t69yi4q');
+        document.querySelector('#aquifer').addEventListener("click", () => {
+            map.current = new mapboxgl.Map({
+                container: mapContainer.current,
+                style: 'mapbox://styles/spartanraj/clam4hyns006v15qm9t69yi4q',
+                center: [lng, lat],
+                zoom: zoom
+            });
         });
 
         document.querySelector('#rainfall').addEventListener("click", () => {
-
+            map.current = new mapboxgl.Map({
+                container: mapContainer.current,
+                style: 'mapbox://styles/spartanraj/clanawm5k001414mmayh06an7',
+                center: [lng, lat],
+                zoom: zoom
+            });
         });
 
         document.querySelector('#recharge').addEventListener("click", () => {
-            console.log('3')
+            map.current = new mapboxgl.Map({
+                container: mapContainer.current,
+                style: 'mapbox://styles/spartanraj/clanakvk8001314phd67uxfc5',
+                center: [lng, lat],
+                zoom: zoom
+            });
         });
 
         document.querySelector('#well').addEventListener("click", () => {
@@ -255,8 +270,8 @@ function FullMap() {
             <div className='islands'>
                 <div className='dynamicIsland'>
                     <button id='aquifer'>Aquifers</button>
-                    <button id='rainfall'>Rain</button>
-                    <button id='recharge'>Recharge</button>
+                    <button id='rainfall'>Recharge</button>
+                    <button id='recharge'>Rain</button>
                     <button id='well'>Well</button>
                 </div>
             </div>
@@ -312,4 +327,4 @@ function FullMap() {
     );
 }
 
-export default FullMap
+export default NewMap

@@ -1,0 +1,49 @@
+.login {
+    margin-top: 40px;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginCon {
+    background-color: rgb(179, 200, 219);
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.loginU {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginUN {
+    color: rgb(41, 37, 37);
+    margin-bottom: 6px;
+}
+
+.loginU>input {
+    min-width: 40vh;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.loginU>input:focus {
+    outline: none;
+}
+
+.buttonL {
+    background-color: rgb(69, 69, 46) !important;
+    color: white !important;
+    display: flex;
+    width: 100% !important;
+    margin-top: 40px !important;
+}
+
+.errMsg {
+    color: red;
+    font-size: 14px;
+}

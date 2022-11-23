@@ -7,7 +7,7 @@
     z-index: -1000;
 }
 
-.img>img {
+.img>video {
     width: 100%;
     /* overflow: hidden !important; */
     object-fit: cover;
@@ -15,12 +15,21 @@
 
 }
 
+
 .sometext {
     font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.595);
+    color: black;
+    border-radius: 30px;
+}
+
+.sometext>p{
+
 }
